@@ -1,5 +1,12 @@
-<strong>Note:</strong> This plugin is no longer being maintained.
-
+```diff
+- Note: This plugin is no longer being maintained.
+```
+```vim
+" Since Vim v8.2.5066 (2022-06-07), you could use `leadmultispace` in listchars for equivalent behaviour
+" feel free to use this conceal-less alternative supporting varying buffer shift widths:
+set list
+autocmd BufEnter * execute 'setlocal listchars=tab:│\ ,multispace:┆' . repeat('\ ', &shiftwidth - 1) . ',trail:·'
+```
 
 <p align="center">
 <img src="https://raw.githubusercontent.com/thaerkh/vim-indentguides/master/wiki/screenshots/demo.png" >
